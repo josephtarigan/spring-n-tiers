@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="id.co.template.persistence.test.TestMapper">
+	<select id="getListTestDto" resultMap="id.co.template.persistence.TestResultMapper.testResultMapper">
+		select 1 as id, 'test1' as value
+		union 
+		select 2 as id, 'test2' as value;
+	</select>
+</mapper>

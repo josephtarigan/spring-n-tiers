@@ -1,0 +1,23 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window 
+	viewModel="@id('vm') @init('id.co.template.ui.vmd.IndexVmd')"
+	title="new page title" 
+	border="normal">
+	
+	<grid model="@load(vm.testDtoList)">
+		<columns>
+			<column label="ID" />
+			<column label="Value" />
+		</columns>
+		<rows>
+			<template name="model">
+				<row>
+					<label value="@load(each.id)" />
+					<label value="@load(each.value)" />
+				</row>
+			</template>
+		</rows>
+	</grid>
+</window>
+</zk>
